@@ -1,0 +1,29 @@
+<div class="container">
+    <!-- Titre principal -->
+    <h1 class="title">Welcome to Colonia</h1>
+    <br>
+    <!-- Description -->
+    <p class="description">
+      Colonia is a project of smart solutions for energy optimization, sustainability, and real-time insights in industrial zones.
+    </p>
+    <br>
+    <!-- Grid -->
+    <mat-grid-list [cols]="3" rowHeight="200px" gutterSize="20px">
+      <mat-grid-tile
+        *ngFor="let tile of tiles"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.background]="tile.color"
+        [routerLink]="tile.route"
+      >
+        <div class="tile-content">
+          <!-- Icône -->
+          <i [class]="tile.iconClass"></i>
+          <!-- Texte -->
+          <p>{{ tile.text }}</p>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+    
+  </div>
+  
